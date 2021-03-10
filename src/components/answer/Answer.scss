@@ -1,0 +1,39 @@
+
+.answer button {
+	height: 46px;
+	margin-left: 10px;
+}
+
+
+.answer {
+	.entry-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		input {
+			height: 40px;
+			border-radius: 10px;
+			border: none;
+			font-size: 18px;
+			padding:0;
+			padding-left: 5px;
+		}
+
+		button {
+			height: 40px;
+			background-color: white;
+			border: none;
+			border-radius: 10px;
+		}
+
+		button:hover {
+			border: 1px solid black;
+		}
+	}
+	
+	p {
+		padding: 0;
+		max-width: 100% !important;
+	}
+}

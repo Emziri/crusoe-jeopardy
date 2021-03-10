@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+body {
+  font-size: 16px;
+  font-family: arial;
+
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
