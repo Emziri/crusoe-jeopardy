@@ -11,10 +11,10 @@ const Answer = (props) => {
 		if(prepCompare(props.answer).includes(prepCompare(answer))){
 			setCorrect(true);
 			setAnswer('');
-			setTimeout(props.ansHandler, 1500);
+			setTimeout(()=> props.ansHandler(true), 1500);
 		} else {
 			setCorrect(false);
-			setTimeout(props.close, 1500);
+			setTimeout(()=> props.ansHandler(false), 1500);
 		}
 	}
 

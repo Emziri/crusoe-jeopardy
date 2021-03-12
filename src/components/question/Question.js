@@ -3,9 +3,15 @@ import Answer from '../answer/Answer';
 
 const Question = (props) => {
 
-	const handleAnswer = () => {
-		props.scoreHandler(props.clue.value);
-		props.close();
+	const handleAnswer = (correct) => {
+
+		if(correct){
+			props.scoreHandler(props.clue.value);
+			props.close();
+		} else {
+			props.scoreHandler(0);
+			props.close();
+		}
 	}
 
 	return (
@@ -14,7 +20,7 @@ const Question = (props) => {
 			<div className="question-content">
 				<div className="question-cat">{props.clue.category.title}</div>
 				<p>{props.clue.question}</p>
-				<Answer answer={props.clue.answer} val={props.clue.value} close={props.close} ansHandler={handleAnswer}/>
+				<Answer answer={props.clue.answer} val={props.clue.value} ansHandler={handleAnswer}/>
 			</div>
 		</div>
 	);
